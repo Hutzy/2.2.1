@@ -14,7 +14,6 @@ public class User {
 //   @MapsId("id")
 //   @PrimaryKeyJoinColumn
 //   @OneToOne(cascade = CascadeType.ALL)
-   //aaaaaaaa suka da kak tebya ebat
    @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(name = "id")
    private Car car;
