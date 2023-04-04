@@ -14,15 +14,11 @@ public class User {
 //   @MapsId("id")
 //   @PrimaryKeyJoinColumn
 //   @OneToOne(cascade = CascadeType.ALL)
-   //aaaaaaaa suka dad kak tebya ebat
+   //aaaaaaaa suka da kak tebya ebat
    @OneToOne(cascade = CascadeType.ALL)
    @JoinColumn(name = "id")
    private Car car;
 
-   /*
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "")
-    */
 
    @Column(name = "name")
    private String firstName;
@@ -35,7 +31,44 @@ public class User {
 
 
    public User() {}
-   
+
+   public long getId() {
+      return id;
+   }
+
+   public Car getCar() {
+      return car;
+   }
+
+   public String getFirstName() {
+      return firstName;
+   }
+
+   public String getLastName() {
+      return lastName;
+   }
+
+   public String getEmail() {
+      return email;
+   }
+
+
+   public void setCar(Car car) {
+      this.car = car;
+   }
+
+   public void setFirstName(String firstName) {
+      this.firstName = firstName;
+   }
+
+   public void setLastName(String lastName) {
+      this.lastName = lastName;
+   }
+
+   public void setEmail(String email) {
+      this.email = email;
+   }
+
    public User(String firstName, String lastName, String email, Car car) {
       this.firstName = firstName;
       this.lastName = lastName;
