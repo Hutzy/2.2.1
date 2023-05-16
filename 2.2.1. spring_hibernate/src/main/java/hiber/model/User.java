@@ -10,12 +10,8 @@ public class User {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private long id;
 
-//   @OneToOne(fetch = FetchType.LAZY)
-//   @MapsId("id")
-//   @PrimaryKeyJoinColumn
-//   @OneToOne(cascade = CascadeType.ALL)
    @OneToOne(cascade = CascadeType.ALL)
-   @JoinColumn(name = "id")
+   @MapsId
    private Car car;
 
 
